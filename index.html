@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio player</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/audio-player.css" />
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div class="header">
+      Code available on <a href="https://github.com/ahasverus/audio-player" target="_blank"><i id="github" class="fa fa-github fa-fw" aria-hidden="true"></i></a>
+    </div>
+
+<!-- ALBUM COVER -->
+
+    <div id="audio-image">
+      <img id="cover" src="" alt="cover" class="album-cover" />
+    </div>
+
+    <div id="controler" class="controler">
+
+
+<!-- AUDIO DURATION BAR -->
+
+      <div class="audio-duration">
+        <div id="time-start" class="time time-start">1:78</div>
+        <div id="time-end" class="time time-end">-3:56</div>
+        <div style="clear: both;"></div>
+        <div class="audio-player-progress"><span class="audio-player-progress-bar"></span></div>
+      </div>
+
+      <div style="clear: both;"></div>
+
+
+<!-- AUDIO BUTTONS -->
+
+      <div id="audio-control" class="audio-control" style="display:none;">
+        <i id="random" class="fa fa-random fa-fw" aria-hidden="true"></i>
+        <i id="backward" class="fa fa-backward fa-fw" aria-hidden="true"></i>
+        <i id="playpause" class="fa fa-pause fa-fw" aria-hidden="true"></i>
+        <i id="forward" class="fa fa-forward fa-fw" aria-hidden="true"></i>
+        <i id="show-playlist" class="fa fa-list fa-fw" aria-hidden="true"></i>
+      </div>
+
+
+<!-- CURRENT SONG INFOS -->
+
+      <div id="infos-song">
+        <p id="song-title"></p>
+        <span id="song-artist"></span>
+        <span id="song-album"></span>
+      </div>
+
+    </div>
+
+
+<!-- SONGS PLAYLIST -->
+
+    <ul id="playlist" style="display:none;">
+
+      <li song="Boma Yeh" file="dooz-kawa-boma-yeh.mp3" album="3rd Lab 03" artist="Dooz Kawa" cover="cover-3rdlab-03.jpg" class="active">
+        <img src="imgs/cover-3rdlab-03.jpg" alt="cover" class="sub-cover" />
+        <div class="song-meta">
+          <span class="song-title">Boma Yeh</span><br />
+          <span class="song-artist">Dooz Kawa</span>
+        </div>
+        <div style="clear: both;"></div>
+      </li>
+
+      <li song="Bandits" file="dooz-kawa-bandits.mp3" album="3rd Lab 01" artist="Dooz Kawa" cover="cover-3rdlab-01.jpg">
+        <img src="imgs/cover-3rdlab-01.jpg" alt="cover" class="sub-cover" />
+        <div class="song-meta">
+          <span class="song-title">Bandits</span><br />
+          <span class="song-artist">Dooz Kawa</span>
+        </div>
+        <div style="clear: both;"></div>
+      </li>
+
+      <li song="Bostellan" file="dooz-kawa-bostellan.mp3" album="[Archives]" artist="Dooz Kawa" cover="cover-archives.jpg">
+        <img src="imgs/cover-archives.jpg" alt="cover" class="sub-cover" />
+        <div class="song-meta">
+          <span class="song-title">Bostellan</span><br />
+          <span class="song-artist">Dooz Kawa</span>
+        </div>
+        <div style="clear: both;"></div>
+      </li>
+
+      <li song="Hard and stronger" file="stoneface-priest-hard-and-stronger.mp3" album="Take control" artist="Stoneface Priest" cover="cover-take-control.jpg">
+        <img src="imgs/cover-take-control.jpg" alt="cover" class="sub-cover" />
+        <div class="song-meta">
+          <span class="song-title">Hard and stronger</span><br />
+          <span class="song-artist">Stoneface Priest</span>
+        </div>
+        <div style="clear: both;"></div>
+      </li>
+
+      <li song="Roots man" file="stoneface-priest-roots-man.mp3" album="Take control" artist="Stoneface Priest" cover="cover-take-control.jpg">
+        <img src="imgs/cover-take-control.jpg" alt="cover" class="sub-cover" />
+        <div class="song-meta">
+          <span class="song-title">Roots man</span><br />
+          <span class="song-artist">Stoneface Priest</span>
+        </div>
+        <div style="clear: both;"></div>
+      </li>
+
+      <li song="Cantina Rag" file="jackson-f-smith-cantina-rag.mp3" album="Jackson Frederick Smith" artist="Jackson F. Smith" cover="cover-jackson-f-smith.jpg">
+        <img src="imgs/cover-jackson-f-smith.jpg" alt="cover" class="sub-cover" />
+        <div class="song-meta">
+          <span class="song-title">Cantina Rag</span><br />
+          <span class="song-artist">Jackson F. Smith</span>
+        </div>
+        <div style="clear: both;"></div>
+      </li>
+
+      <li song="The Entertainer (1902, piano roll)" file="scott-joplin-the-entertainer.mp3" album="Ragtime Era Favorites" artist="Scott Joplin" cover="cover-scott-joplin.jpg">
+        <img src="imgs/cover-scott-joplin.jpg" alt="cover" class="sub-cover" />
+        <div class="song-meta">
+          <span class="song-title">The Entertainer (1902, piano roll)</span><br />
+          <span class="song-artist">Scott Joplin</span>
+        </div>
+        <div style="clear: both;"></div>
+      </li>
+    </ul>
+  </div>
+
+
+<!-- JAVASCRIPT LOADING -->
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/audio-player.js"></script>
+</body>
+</html>

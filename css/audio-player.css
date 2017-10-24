@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+  font-family: "Roboto",sans-serif;
+}
+
+#container {
+  display: block;
+  margin: auto;
+  width: 300px;
+  height: 300;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 50px;
+  background-color: #fff;
+}
+
+.album-cover {
+  width: 300px;
+  display: block;
+  margin: auto;
+  padding: 0;
+  opacity: 1.0;
+  filter: alpha(opacity = 100);
+}
+
+.audio-player-progress {
+  display: block;
+  width: 240px;
+  height: 5px;
+  border-radius: 25px;
+  background-color: #ddd;
+  overflow: hidden;
+}
+
+.audio-player-progress.loading {
+  background-image: -webkit-linear-gradient(-45deg, #808e97 25%, transparent 25%, transparent 50%, #808e97 50%, #808e97 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, #808e97 25%, transparent 25%, transparent 50%, #808e97 50%, #808e97 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, #808e97 25%, transparent 25%, transparent 50%, #808e97 50%, #808e97 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, #808e97 25%, transparent 25%, transparent 50%, #808e97 50%, #808e97 75%, transparent 75%, transparent);
+  background-size: 20px 20px;
+  -webkit-animation: loadingStripes 700ms linear infinite;
+  -moz-animation: loadingStripes 700ms linear infinite;
+  -ms-animation: loadingStripes 700ms linear infinite;
+  -o-animation: loadingStripes 700ms linear infinite;
+  animation: loadingStripes 700ms linear infinite;
+}
+
+.audio-player-progress-bar {
+  -webkit-transition: width 200ms linear;
+  -moz-transition: width 200ms linear;
+  -o-transition: width 200ms linear;
+  transition: width 200ms linear;
+  display: block;
+  height: 100%;
+  width: 0%;
+  max-width: 100%;
+  background-color: #888;
+  border-radius: 25px;
+}
+
+.audio-control {
+  padding: 10px 5px;
+  margin-top: 8px;
+  padding-bottom: 2px;
+  position:relative;
+  width: 290px;
+  text-align: center;
+  height: 50px;
+}
+
+.audio-duration {
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: block;
+}
+
+.fa {
+  color: #666;
+  line-height: 35px;
+  font-size: 25px;
+  vertical-align: middle;
+  width: 46px;
+}
+
+.fa-play {
+  line-height: 35px;
+  font-size: 35px;
+  width: 60px;
+}
+
+.fa-pause {
+  line-height: 35px;
+  font-size: 32px;
+  width: 60px;
+}
+
+.fa:hover {
+  color: #888;
+}
+
+.time {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.time-start {
+  float: left;
+  padding-bottom: 5px;
+}
+
+.time-end {
+  float: right;
+  padding-bottom: 5px;
+}
+
+#infos-song {
+  margin: 10px 30px;
+  position:relative;
+  width: 240px;
+  text-align: center;
+  height: 50px;
+  color: #aaa;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+#song-title {
+  font-size: 16px;
+  color: #444;
+  line-height: 25px;
+  text-align: center;
+  width: 240px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+#song-artist, #song-album {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 25px;
+  text-align: center;
+  width: 240px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+#song-album::before {
+  content: "\2014\2003";
+  font-size: 13px;
+  color: #aaa;
+}
+
+.pushed {
+  color: #ddd;
+}
+
+.pushed:hover {
+  color: #888;
+}
+
+#playlist {
+  padding: 5px 30px 10px 30px;
+  position:relative;
+  width: 240px;
+  text-align: left;
+  height: 145px;
+  overflow: scroll;
+  list-style-type: none;
+  font-size: 13px;
+  border-top: 1px solid #ddd;
+}
+
+#playlist li {
+  height: 50px;
+}
+
+#playlist li img {
+  width: 45px;
+  margin: 0;
+  padding: 2.5px 0;
+  float: left;
+}
+
+.song-meta {
+  float: left;
+  margin: 0;
+  padding: 5px 0;
+  margin-left: 10px;
+  line-height: 20px;
+  border-bottom: 1px solid #ddd;
+  width: 185px;
+}
+
+.song-title {
+  font-size: 14px;
+  color: #444;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  width:185px;
+  display:inline-block;
+}
+
+.song-artist {
+  color: #aaa;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  width:185px;
+  display:inline-block;
+}
+
+#playlist li.active {
+  font-style: italic;
+  font-weight: bold;
+}
+
+#playlist li:hover {
+  cursor: default;
+}
+
+.sub-cover:hover {
+  cursor: pointer;
+}
+
+.header {
+  padding: 0px 0px;
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  color: #eee;
+}
+
+.fa-github {
+  color: #eee;
+  font-size: 18px;
+  /*line-height: 20px;*/
+  margin: 0;
+  padding: 0 5px;
+  width:auto;
+  height: auto;
+}
+
+.header:hover {
+  color: #aaa;
+  cursor: pointer;
+}
+
+
+.header:hover .fa-github {
+  color: #aaa;
+  cursor: pointer;
+}
