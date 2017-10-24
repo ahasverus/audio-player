@@ -79,6 +79,9 @@ $(function(){
     if (next.length == 0) {
       next = $('#playlist li:first-child');
     }
+    if($("#playpause").hasClass("fa-play")){
+      $("#playpause").removeClass("fa-play").addClass("fa-pause");
+    }
     initAudio(next);
     audio.play();
     showDuration();
@@ -92,8 +95,11 @@ $(function(){
     var prev = $('#playlist li.active').prev();
     $('#playlist li.active').removeClass("active");
     if (prev.length == 0) {
-        prev = $('#playlist li:last-child');
-      }
+      prev = $('#playlist li:last-child');
+    }
+    if($("#playpause").hasClass("fa-play")){
+      $("#playpause").removeClass("fa-play").addClass("fa-pause");
+    }
     initAudio(prev);
     audio.play();
     showDuration();
