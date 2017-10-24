@@ -56,12 +56,6 @@ $(function(){
   }
 
 
-  // ON PAGE REFRESH -> PLAY FIRST SONG
-
-  initAudio($('#playlist li:first-child'));
-  audio.play();
-
-
   // PLAY-PAUSE BUTTON
 
   $("#playpause").click(function(){
@@ -177,4 +171,12 @@ $(function(){
     $('#audio-control').hide();
     $('#infos-song').show();
   });
+
+
+  // ON PAGE REFRESH -> PLAY FIRST SONG
+
+  initAudio($('#playlist li:first-child'));
+  audio.play();
+  $('#playpause').trigger('click');
+  $('#playpause').trigger('click');
 });
